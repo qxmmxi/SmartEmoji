@@ -10,7 +10,13 @@
       The phone I used during development is Honor V10. In this part, you may need to measure the model adaptation problem.
     
 ## Emoticon loading logic:
+###
    1.The assets are the default expressions; they are read by the configuration information inside.
+###
    2.When the application is initialized, it will request configuration information from the server (refer to tabconfigs.json in the assets). If there is an updated expression, it will download the emoticon package and synchronize the local configuration (the emoticon content refers to the assets file).
+   
+## Other:
+   Please refer to BaseBottomBarActivity for specific usage. 
+   Please leave a message if you have any questions.
 
-
+## Project operation effect:
