@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--表情-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/emoji_linearLayout"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/emoji_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp" />
+
+    </LinearLayout>
+
+    <!--表情小点滑动区-->
+    <LinearLayout
+        android:id="@+id/emoji_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_above="@+id/emoji_tabs_layout"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <!--底部滑动区-->
+    <LinearLayout
+        android:id="@+id/emoji_tabs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <widgets.PagerSlidingTabStripView
+            android:id="@+id/emoji_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsShouldExpand="false"
+            app:pstsTabPaddingLeftRight="25dp" />
+    </LinearLayout>
+</merge>

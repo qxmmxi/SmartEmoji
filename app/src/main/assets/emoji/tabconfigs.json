@@ -1,0 +1,21 @@
+[
+  {
+    "downloadUrl": "http://xxx.zip",
+    "md5": "95837e37d705ac7da32a87d2053d8bab",
+    "groupVersion": 0,
+    "groupId": 0,
+    "tabId": 0
+  }
+//,
+//  {"downloadUrl":"http://xxx.zip",
+//    "md5":"8600149973fef68b7c4352b74fa3b776",
+//    "groupVersion":0,
+//    "groupId":1,
+//    "tabId":1},
+//  {"downloadUrl":"http://xxx.zip",
+//    "md5":"4752b32d006310e3aba6ba5fedbe7ec2",
+//    "groupVersion":0,
+//    "groupId":2,
+//    "tabId":2}
+
+]

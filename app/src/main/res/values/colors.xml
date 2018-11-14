@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#282d2c</color>
+    <color name="record_voice_btn_color">#666666</color>
+    <color name="txt_hint_color">#999999</color>
+    <!--emoji-->
+    <color name="background_tab_pressed">#282d2c</color>
+    <color name="line_color">#cccccc</color>
+    <color name="emo_item_pressed_color">#F6F6F6</color>
+</resources>

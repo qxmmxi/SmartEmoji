@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SmartEmoji</string>
+    <string name="action_settings">Settings</string>
+    <string name="send_message">send</string>
+    <string name="message_too_long">The content of the comment cannot exceed 500 words #。#</string>
+    <string name="take_photo">take photo</string>
+    <string name="pick_pickture">pick picture</string>
+    <string name="sdcard_unavaluable">Please check if the memory card is available</string>
+    <string name="take_photo_failed">Photo shooting failed</string>
+    <string name="take_photo_permission">Your camera permissions are turned on. Please try again before.</string>
+    <string name="take_photo_permission_tip">You have turned off camera permissions, please turn it on and try again.</string>
+</resources>
