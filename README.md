@@ -20,6 +20,4 @@
    Please leave a message if you have any questions.
 
 ## Project operation effect:
-![](https://github.com/qxmmxi/SmartEmoji/blob/master/screenshots/1.jpg?raw=true)
-![](https://github.com/qxmmxi/SmartEmoji/blob/master/screenshots/2.jpg?raw=true)
-![](https://github.com/qxmmxi/SmartEmoji/blob/master/screenshots/3.jpg?raw=true)
+![](https://github.com/qxmmxi/SmartEmoji/blob/master/screenshots/1.jpg?raw=true)![](https://github.com/qxmmxi/SmartEmoji/blob/master/screenshots/2.jpg?raw=true)![](https://github.com/qxmmxi/SmartEmoji/blob/master/screenshots/3.jpg?raw=true)
