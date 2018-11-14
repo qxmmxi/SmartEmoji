@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# SmartEmoji
-=======
 # SmartEmoji
    Applicable scene: There are scenes that need to input expressions, pictures, and text content, such as: comment component, message input component.
    
@@ -23,4 +20,3 @@
    Please leave a message if you have any questions.
 
 ## Project operation effect:
->>>>>>> e1257406bba4dbce542c086029b68ccf99f39c2c
