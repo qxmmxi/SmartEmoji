@@ -2,7 +2,6 @@ package app;
 
 import android.app.Application;
 import android.content.Context;
-
 import network.LoadManager;
 import widgets.EmoticonHelper;
 

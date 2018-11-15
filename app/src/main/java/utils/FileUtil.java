@@ -3,7 +3,6 @@ package utils;
 import android.content.Context;
 import android.os.Environment;
 import android.text.TextUtils;
-
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;

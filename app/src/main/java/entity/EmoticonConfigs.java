@@ -1,7 +1,6 @@
 package entity;
 
 import java.util.List;
-
 import network.BaseModel;
 
 

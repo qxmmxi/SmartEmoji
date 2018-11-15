@@ -19,12 +19,9 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-
 import com.smartemoji.R;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import entity.EmoticonEntity;
 import entity.EmoticonEntityItem;
 import utils.ScreenUtil;

@@ -1,7 +1,6 @@
 package network;
 
 import android.content.Context;
-
 import utils.NetworkUtil;
 import widgets.EmoticonHelper;
 

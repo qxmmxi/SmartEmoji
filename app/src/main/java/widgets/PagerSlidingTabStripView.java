@@ -38,9 +38,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.smartemoji.R;
-
 import java.util.List;
 import java.util.Locale;
 
@@ -281,11 +279,6 @@ public class PagerSlidingTabStripView extends HorizontalScrollView {
 
     }
 
-    /**
-     * 控制tab的滑动
-     *
-     * @param tabPosition tab中的位置
-     */
     private void scrollToChild(int tabPosition) {
 
         if (tabCount == 0 || (tabPosition == 0 && lastPagerIndex == 0)) {
@@ -330,7 +323,6 @@ public class PagerSlidingTabStripView extends HorizontalScrollView {
             lineRight = (currentPositionOffset * nextTabRight + (1f - currentPositionOffset) * lineRight);
         }
 
-        /** 表情不绘制底部指示器 **/
 //        canvas.drawRect(lineLeft, height - indicatorHeight, lineRight, height, rectPaint);
 
         // draw underline
@@ -513,10 +505,6 @@ public class PagerSlidingTabStripView extends HorizontalScrollView {
         return savedState;
     }
 
-    /**
-     * 原有接口是根据资源ID来找icon的，现改为根据tab的位置，
-     * 返回对应的Drawable对象
-     */
     public interface IconTabProvider {
 
         Drawable getPageIcon(int position);
@@ -587,7 +575,6 @@ public class PagerSlidingTabStripView extends HorizontalScrollView {
 
                 if (position == pageRecorder.get(i)) {
 
-                    //tab右移，情况：当某类表情只有一页内容
                     if (i + 1 < length) {
                         if(lastPagerIndex == pageRecorder.get(i + 1)){
                             scrollToChild(i);
@@ -596,7 +583,6 @@ public class PagerSlidingTabStripView extends HorizontalScrollView {
                         }
                     }
 
-                    //表情从左边一类移动到右边另一类，则tab右移
                     if (lastPagerIndex < pageRecorder.get(i)) {
                         scrollToChild(i);
                         currentPosition = i;
@@ -606,7 +592,6 @@ public class PagerSlidingTabStripView extends HorizontalScrollView {
 
                 if (position == pageRecorder.get(i) - 1 &&
                         lastPagerIndex == pageRecorder.get(i)) {
-                    //表情从右边一类移动到左边另一类，则tab左移
                     scrollToChild(i - 1);
                     currentPosition = i - 1;
                     break;
@@ -619,7 +604,6 @@ public class PagerSlidingTabStripView extends HorizontalScrollView {
             }
             lastPagerIndex = position;
 
-            // 更新选中状态
             updateTabStyles();
 
 //            invalidate();

@@ -20,7 +20,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
 import common.SPreferences;
 import common.SysConstant;
 import entity.EmoticonEntityItem;
