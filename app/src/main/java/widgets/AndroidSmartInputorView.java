@@ -257,6 +257,7 @@ public class AndroidSmartInputorView extends LinearLayout implements View.OnClic
 
     public interface BottomBarOnClickListener {
         void onSendClick(String str);
+        void onCustomImageClick(EmoticonEntityItem emoticonEntityItem);
     }
 
     private void showAddMore() {
@@ -389,6 +390,11 @@ public class AndroidSmartInputorView extends LinearLayout implements View.OnClic
 
     @Override
     public void onImageSelected(final EmoticonEntityItem item) {
+        CharSequence charSequence = EmoticonParserHelper.getInstance()
+                .emoCharsequence(getContext(), mEdit.getText().append(item.connName));
+        mEdit.setText(charSequence);
+        mEdit.setSelection(mEdit.getText().length());
+        bottomBarOnClickListener.onCustomImageClick(item);
     }
 
 

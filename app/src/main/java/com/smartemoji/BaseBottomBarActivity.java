@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Build;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import java.io.IOException;
 
 import common.SysConstant;
+import entity.EmoticonEntityItem;
 import utils.ImageUtils;
 import widgets.AndroidSmartInputorView;
 import widgets.CustomToast;
@@ -45,6 +47,7 @@ public class BaseBottomBarActivity extends Activity implements AndroidSmartInput
         bottomBarView = findViewById(R.id.bottom_bar);
         textView = findViewById(R.id.show_words);
         imageView = findViewById(R.id.image);
+
 //        textView.setText(StringUtils.getEmojiByUnicode(0x1F60A)+"hello"+StringUtils.getEmojiByUnicode("0x1F60B"));
         mResizeLayout = findViewById(R.id.resize_layout);
         findViewById(R.id.container).setOnTouchListener(mOnTouchListener);
@@ -179,5 +182,10 @@ public class BaseBottomBarActivity extends Activity implements AndroidSmartInput
     @Override
     public void onSendClick(String str) {
         textView.setText(EmoticonParserHelper.getInstance().emoCharsequence(this,str));
+    }
+
+    @Override
+    public void onCustomImageClick(EmoticonEntityItem emoticonEntityItem) {
+        imageView.setImageBitmap(BitmapFactory.decodeFile(emoticonEntityItem.fileName));
     }
 }

@@ -1,1 +1,16 @@
+.gradle/
+.idea/*
+*.iml
+*.DS_Store
+.gradle
+/local.properties
 /build
+build/
+app/build/
+app/.idea/
+app/gradle/
+local.properties
+channel/
+temp/
+.idea/misc.xml
+.idea/modules.xml
