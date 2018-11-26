@@ -21,5 +21,6 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="Widget.GifMoviewView" parent="@android:style/Widget"/>
 
 </resources>

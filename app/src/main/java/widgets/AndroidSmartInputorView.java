@@ -257,6 +257,7 @@ public class AndroidSmartInputorView extends LinearLayout implements View.OnClic
     public interface BottomBarOnClickListener {
         void onSendClick(String str);
         void onCustomImageClick(EmoticonEntityItem emoticonEntityItem);
+        void onCustomGifClick(EmoticonEntityItem emoticonEntityItem);
     }
 
     private void showAddMore() {
@@ -384,7 +385,8 @@ public class AndroidSmartInputorView extends LinearLayout implements View.OnClic
 
     @Override
     public void onGifSelected(EmoticonEntityItem item) {
-
+        item.fileName=item.fileName.replace("png","gif");
+        bottomBarOnClickListener.onCustomGifClick(item);
     }
 
     @Override

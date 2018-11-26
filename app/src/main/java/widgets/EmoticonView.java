@@ -32,8 +32,6 @@ import utils.ScreenUtil;
  */
 public class EmoticonView extends RelativeLayout implements OnItemClickListener, AdapterView.OnItemLongClickListener {
 
-    private static final String TAG = "EmojiView";
-
     private static final String BACKSPACE = "backspace";
     private static final String BACKSPACE_ICON = "emoji/default_emo_back.png";
 

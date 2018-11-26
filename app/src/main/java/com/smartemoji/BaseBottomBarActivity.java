@@ -16,6 +16,11 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import common.SysConstant;
 import entity.EmoticonEntityItem;
@@ -23,6 +28,7 @@ import utils.ImageUtils;
 import widgets.AndroidSmartInputorView;
 import widgets.CustomToast;
 import widgets.EmoticonParserHelper;
+import widgets.GifMovieView;
 import widgets.ResizeLayoutView;
 
 
@@ -34,6 +40,7 @@ public class BaseBottomBarActivity extends Activity implements AndroidSmartInput
 
     AndroidSmartInputorView bottomBarView;
     TextView textView;
+    GifMovieView gifMovieView;
     private ResizeLayoutView mResizeLayout = null;
     private int mRootBottom = Integer.MIN_VALUE;
     private ImageView imageView;
@@ -45,6 +52,7 @@ public class BaseBottomBarActivity extends Activity implements AndroidSmartInput
         bottomBarView = findViewById(R.id.bottom_bar);
         textView = findViewById(R.id.show_words);
         imageView = findViewById(R.id.image);
+        gifMovieView = findViewById(R.id.gif_image);
 
 //        textView.setText(StringUtils.getEmojiByUnicode(0x1F60A)+"hello"+StringUtils.getEmojiByUnicode("0x1F60B"));
         mResizeLayout = findViewById(R.id.resize_layout);
@@ -185,5 +193,16 @@ public class BaseBottomBarActivity extends Activity implements AndroidSmartInput
     @Override
     public void onCustomImageClick(EmoticonEntityItem emoticonEntityItem) {
         imageView.setImageBitmap(BitmapFactory.decodeFile(emoticonEntityItem.fileName));
+    }
+
+    @Override
+    public void onCustomGifClick(EmoticonEntityItem emoticonEntityItem) {
+        File gifFile = new File(emoticonEntityItem.fileName);
+        try {
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream(gifFile));
+            gifMovieView.setMovieInputStream(bis);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
